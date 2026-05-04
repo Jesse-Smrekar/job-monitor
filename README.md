@@ -7,6 +7,7 @@ match given criteria. Leverages [jobspy](https://pypi.org/project/python-jobspy/
 
 ## Setup
 
+#### Step 1
 ```sh
 # Install dependencies
 pip install -r requirements.txt
@@ -19,6 +20,18 @@ cp .env.example .env
 # Edit .env — fill in your email smtp server and credential details.
 
 ```
+
+#### Step 2
+Configure your search criteria in [config.yaml](./config.yaml).\
+You'll want to look through all of the properties listed here and tweak them as you wish. The file comments should hopefully make the meaning of each property clear.
+
+Each separate entry under `search.queries` will result in a different search to each of job boards.
+
+**PLEASE** change the `notifications.notify_email` property so I don't get spammed :)
+
+
+
+
 
 ---
 
@@ -36,7 +49,7 @@ python main.py --schedule
 python main.py --config my_other_search.yaml
 ```
 
-<img src=./docs/email_notification.jpg>
+<img src=./docs/email_notification.JPG>
 
 ---
 
