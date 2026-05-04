@@ -1,0 +1,31 @@
+search:
+  results_wanted: 20     # Sensible default for performance
+  hours_old: 12          # Only return postings newer than this many hours
+  job_type: fulltime     # fulltime | parttime | contract | internship | null (any)
+  # is_remote: null        # true = remote only | false = on-site only | null = no filter
+  interval_minutes: 5    # How often to check in --schedule mode
+  site_names:            # Which sites do you want to search for results?
+  - glassdoor
+  - linkedin
+  - indeed
+  queries:               # here is a list of all the different searches you want to make
+    - job_titles: "Software Engineer"
+      locations: "Minneapolis, MN"
+      is_remote: false
+    - job_title: "Software Engineer"
+      location: "Remote"
+      is_remote: true   
+    - job_title: "GPU Engineer"
+      location: "Remote"
+      is_remote: true      
+    
+
+
+notifications:
+  notify_email: "jjsmre@gmail.com"  # Recipient address for email digest
+  desktop_notify: true              # Get a Windows notification if new jobs are avaialable
+  desktop_notify_url: "https://mail.google.com/mail/u/0/"  # URL opened when clicking the desktop notification
+  desktop_notify_sound: true        # true - the notification makes a sound | false - it's silent
+
+database:
+  db_path: "seen_jobs.db"
