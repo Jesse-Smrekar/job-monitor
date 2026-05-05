@@ -9,13 +9,19 @@ search:
   - linkedin
   - indeed
   queries:               # here is a list of all the different searches you want to make
-    - job_titles: "Software Engineer"
+    - job_titles: '"Software Engineer"'   # include "" in your search for exact matches
       locations: "Minneapolis, MN"
       is_remote: false
-    - job_title: "Software Engineer"
+    - job_title: '"Software Engineer"'
       location: "Remote"
-      is_remote: true   
-    - job_title: "GPU Engineer"
+      is_remote: true
+    - job_titles: '"Software Developer"'
+      locations: "Minneapolis, MN"
+      is_remote: false
+    - job_title: '"Software Developer"'
+      location: "Remote"
+      is_remote: true
+    - job_title: '"GPU Engineer"'
       location: "Remote"
       is_remote: true      
     
