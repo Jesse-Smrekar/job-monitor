@@ -10,9 +10,11 @@ match given criteria. Leverages [jobspy](https://pypi.org/project/python-jobspy/
 #### Step 1
 ```sh
 # Install dependencies
+# will require the VS C++ build tools
 pip install -r requirements.txt
 
 # Install Chromium for Glassdoor scraping
+# You may need to add the python scripts dir to your path
 playwright install chromium
 
 # Set up your secrets
